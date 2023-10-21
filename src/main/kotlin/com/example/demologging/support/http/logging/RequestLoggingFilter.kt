@@ -14,7 +14,7 @@ import java.util.UUID
 @Order(value = Ordered.HIGHEST_PRECEDENCE)
 @Component
 @WebFilter(filterName = "Request Log Filter", urlPatterns = ["/*"])
-class RequestInterceptor : OncePerRequestFilter() {
+class RequestLoggingFilter : OncePerRequestFilter() {
 
     override fun doFilterInternal(
         request: HttpServletRequest,
